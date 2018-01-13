@@ -1,0 +1,234 @@
+
+body
+{
+  line-height: 34px;
+  font-family: Arial, Helvetica Neue, Helvetica, Sans-serif;
+  color: #777777;
+  background-image: url('../images/backgroundZebra.png');
+  background-repeat: repeat-x repeat-y;
+}
+
+header
+{
+  overflow: auto;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  margin: 0 0 30px 0px;
+  overflow: auto;
+  color: #fff;
+  background: #fff;
+  border-bottom: 2px solid #cccccc;
+}
+
+.logo
+{
+  float: left;
+  height: 90px;
+  width: 250px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 90px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background: #4aaaa5;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.content
+{
+  margin: auto;
+  max-width: 960px;
+  min-height: 400px;
+  margin-bottom: 100px;
+  padding-top: 130px;
+}
+
+footer
+{
+  background-color: #666666;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  border-top: 10px solid #499995;
+}
+
+.navigator
+{
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  /*clear: both; *//*removed this and no change happened*/
+}
+
+nav
+{
+  float:right;
+  margin-top : 30px;
+}
+
+nav a
+{
+  padding-left: 15px;
+  margin-left: 15px;
+  display:inline-block;
+  line-height: 18px;
+  color: #999999;
+  text-decoration: none;
+  border-left: 1px solid #efefef;
+}
+
+nav a:first-child
+{
+  border-left: 0 none;
+}
+
+li
+{
+  display: inline;
+  float: right;
+  padding: 0px 5px 10px 0px;
+  margin-left : 10px;
+  font-size:18px;
+}
+h1
+{
+  font-family: Georgia, Times, Times New Roman, Serif;
+  color: #ffffff;
+  background-color: #499995;
+  font-size:40px;
+}
+
+h2
+{
+  font-size: 20px;
+  color: #499995;
+  line-height: 48px;
+  margin: 20px 10px 0px 20px;
+  border-bottom: 3px solid #ddd;
+}
+
+h3
+{
+  text-align:center;
+  color: #499995;
+  font-size: 18px;
+  margin: 20px 20px 0px 20px;
+  line-height: 48px;
+  border-bottom: 2px solid #ddd;
+}
+
+.clearfix::after
+{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+section
+{
+  background-color: #ffffff;
+  float: left;
+  width: 650px;
+  padding-right: 5px;
+  border: 2px solid #dddddd;
+}
+
+aside
+{
+  background-color: #ffffff;
+  float: right;
+  max-width: 270px;
+  border: 2px solid #dddddd; 
+}
+
+.section2
+{
+  padding: 15px;
+}
+
+a 
+{
+  text-decoration: none;
+}
+
+.project
+{
+  position: relative;
+  float: left;
+  width: 274px;
+  margin: 20px 10px 25px;
+  overflow: auto;
+}
+
+.project img
+{
+  width: 100%;
+  border-left: 20px;
+  border-right: 20px;
+  opacity: 0.8;
+}
+
+.project p
+{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  border-bottom: 0;
+  text-align: center;
+  background-color: #499995;
+  padding: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  /*margin-bottom: 5px;*/
+}
+
+.myImage
+{
+  padding: 5px 10px 20px 10px;
+  float: left;
+  height: 200px;
+  width: 200px;
+}
+
+.myLinks
+{
+  margin: 20px 20px 20px 20px;
+  border-bottom: 20px;
+}
+
+img.logo
+{
+  width: 60px;
+  height: 60px;
+  margin: 0px 5px 20px 5px;
+}
+
+input[type=submit]
+{
+  background-color:#499995;
+  display:inline-block;
+  padding: 10px 20px;
+  font-size:20px;
+}
+
+.passage
+{
+  line-height: 25px;
+  padding-left: 10px;
+}
+
+textarea
+{
+  height: 200px;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"]
+{
+  height: 30px;
+  width: 100%;
+  font-size: 15px;
+}
