@@ -133,12 +133,13 @@ section
   width: 650px;
   padding-right: 5px;
   border: 2px solid #dddddd;
+  margin-right: 45px;
 }
 
 aside
 {
   background-color: #ffffff;
-  float: right;
+  float: left;
   max-width: 270px;
   border: 2px solid #dddddd; 
 }
