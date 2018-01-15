@@ -16,32 +16,31 @@ header
   width: 100%;
   margin: 0 0 30px 0px;
   overflow: auto;
-  color: #fff;
   background: #fff;
   border-bottom: 2px solid #cccccc;
 }
 
-.logo
+.nameLogo
 {
+  background: #4aaaa5;
+  color: #ffffff;
   float: left;
-  height: 90px;
-  width: 250px;
+  font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 90px;
-  color: #ffffff;
   text-align: center;
   text-decoration: none;
-  background: #4aaaa5;
-  font-family: Georgia, Times, "Times New Roman", serif;
+  width: 250px;
 }
 
 .content
 {
   margin: auto;
-  max-width: 960px;
+  min-width: 960px;
   min-height: 400px;
   margin-bottom: 100px;
+  margin-left: 120px;
   padding-top: 130px;
 }
 
@@ -49,16 +48,15 @@ footer
 {
   background-color: #666666;
   width: 100%;
-  padding: 20px;
   text-align: center;
+  line-height: 70px;
   border-top: 10px solid #499995;
 }
 
 .navigator
 {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
+  margin-left: 120px;
+  width: 960px;
   /*clear: both; *//*removed this and no change happened*/
 }
 
@@ -70,13 +68,13 @@ nav
 
 nav a
 {
-  padding-left: 15px;
-  margin-left: 15px;
+  border-left: 1px solid #efefef;
+  color: #999999;
   display:inline-block;
   line-height: 18px;
-  color: #999999;
+  margin-left: 15px;
+  padding-left: 15px;
   text-decoration: none;
-  border-left: 1px solid #efefef;
 }
 
 nav a:first-child
@@ -88,65 +86,66 @@ li
 {
   display: inline;
   float: right;
-  padding: 0px 5px 10px 0px;
-  margin-left : 10px;
   font-size:18px;
+  margin-left : 10px;
+  padding: 0px 5px 10px 0px;
 }
+
 h1
 {
-  font-family: Georgia, Times, Times New Roman, Serif;
-  color: #ffffff;
   background-color: #499995;
+  color: #ffffff;
+  font-family: Georgia, Times, Times New Roman, Serif;
   font-size:40px;
 }
 
 h2
 {
-  font-size: 20px;
+  border-bottom: 3px solid #ddd;
   color: #499995;
+  font-size: 20px;
   line-height: 48px;
   margin: 20px 10px 0px 20px;
-  border-bottom: 3px solid #ddd;
 }
 
 h3
 {
-  text-align:center;
+  border-bottom: 2px solid #ddd;
   color: #499995;
   font-size: 18px;
-  margin: 20px 20px 0px 20px;
   line-height: 48px;
-  border-bottom: 2px solid #ddd;
+  margin: 20px 20px 0px 20px;
+  text-align:center;
 }
 
 .clearfix::after
 {
+  clear: both;
   content: "";
   display: block;
-  clear: both;
 }
 
-section
+.mainbar
 {
   background-color: #ffffff;
-  float: left;
-  width: 650px;
-  padding-right: 5px;
   border: 2px solid #dddddd;
+  float: left;
   margin-right: 45px;
+  padding-right: 5px;
+  width: 650px;
 }
 
-aside
+.sidebar
 {
   background-color: #ffffff;
-  float: left;
-  max-width: 270px;
   border: 2px solid #dddddd; 
+  float: left;
+  width: 270px;
 }
 
-.section2
+.mainSection
 {
-  padding: 15px;
+  margin: 15px;
 }
 
 a 
@@ -156,62 +155,62 @@ a
 
 .project
 {
-  position: relative;
   float: left;
-  width: 274px;
   margin: 20px 10px 25px;
   overflow: auto;
+  position: relative;
+  width: 260px;
 }
 
 .project img
 {
-  width: 100%;
   border-left: 20px;
   border-right: 20px;
   opacity: 0.8;
+  width: 100%;
 }
 
 .project p
 {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  border-bottom: 0;
-  text-align: center;
-  background-color: #499995;
-  padding: 15px;
-  color: #ffffff;
-  text-decoration: none;
   /*margin-bottom: 5px;*/
+  background-color: #499995;
+  border-bottom: 0;
+  bottom: 20px;
+  color: #ffffff;
+  padding: 15px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
 }
 
 .myImage
 {
-  padding: 5px 10px 20px 10px;
   float: left;
   height: 200px;
+  padding: 5px 10px 20px 10px;
   width: 200px;
 }
 
 .myLinks
 {
-  margin: 20px 20px 20px 20px;
   border-bottom: 20px;
+  margin: 20px 20px 20px 20px;
 }
 
 img.logo
 {
-  width: 60px;
   height: 60px;
   margin: 0px 5px 20px 5px;
+  width: 60px;
 }
 
 input[type=submit]
 {
   background-color:#499995;
   display:inline-block;
-  padding: 10px 20px;
   font-size:20px;
+  padding: 10px 20px;
 }
 
 .passage
@@ -229,7 +228,90 @@ textarea
 input[type="text"],
 input[type="email"]
 {
+  font-size: 15px;
   height: 30px;
   width: 100%;
-  font-size: 15px;
+}
+
+/*media queries for making the site responsive*/
+@media screen and (max-width: 980px)
+{
+  .navigator
+  {
+    max-width: 720px;
+  }
+  .content
+  {
+    margin: auto;
+    min-width: 750px;
+    min-height: 400px;
+    margin-bottom: 100px;
+    margin-left: 120px;
+    padding-top: 130px;
+  }
+  
+  .mainbar
+  {
+    max-width: 400px;
+  }
+
+  .mainSection .project
+  {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 768px)
+{
+  .navigator
+  {
+    width: 600px;
+    margin-left: 80px;
+  }
+  
+  .content
+  {
+    margin: auto;
+    min-width: 600px;
+    min-height: 400px;
+    margin-bottom: 100px;
+    margin-left: 80px;
+    padding-top: 130px;
+  }
+  
+  .mainbar
+  {
+    min-width: 600px;
+  }
+  .sidebar
+  {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 640px)
+{
+  .navigator
+  {
+    width: 500px;
+  }
+  .content
+  {
+    margin: auto;
+    width: 500px;
+    min-height: 400px;
+    margin-bottom: 100px;
+    margin-left: 60px;
+    padding-top: 130px;
+  }
+  
+  .mainbar
+  {
+    max-width: 400px;
+  }
+  
+  .sidebar
+  {
+    width: 400px;
+  }
 }
