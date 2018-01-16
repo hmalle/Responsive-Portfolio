@@ -14,7 +14,7 @@ header
   position: fixed;
   z-index: 99;
   width: 100%;
-  margin: 0 0 30px 0px;
+  margin-bottom: 30px;
   overflow: auto;
   background: #fff;
   border-bottom: 2px solid #cccccc;
@@ -238,7 +238,7 @@ input[type="email"]
 {
   .navigator
   {
-    max-width: 720px;
+    width: 720px;
   }
   .content
   {
@@ -266,7 +266,7 @@ input[type="email"]
   .navigator
   {
     width: 600px;
-    margin-left: 80px;
+    margin-left: 60px;
   }
   
   .content
@@ -275,17 +275,21 @@ input[type="email"]
     min-width: 600px;
     min-height: 400px;
     margin-bottom: 100px;
-    margin-left: 80px;
+    margin-left: 60px;
     padding-top: 130px;
   }
   
   .mainbar
   {
-    min-width: 600px;
+    min-width: 500px;
   }
   .sidebar
   {
     width: 600px;
+  }
+  .project
+  {
+    width: 450px;
   }
 }
 
@@ -302,16 +306,43 @@ input[type="email"]
     min-height: 400px;
     margin-bottom: 100px;
     margin-left: 60px;
-    padding-top: 130px;
+    margin-right: 60px;
+    padding-top: 180px;
   }
   
   .mainbar
   {
-    max-width: 400px;
+    max-width: 500px;
+    border-bottom: 20px;
   }
   
   .sidebar
   {
-    width: 400px;
+    width: 500px;
+  }
+  
+  .nameLogo
+  {
+    width: 500px;
+    padding: 0px;
+    border: 0px;
+    margin: 0 auto;
+  }
+  
+  .nav
+  {
+    width: 100%;
+    margin: auto;
+    float: left;
+  }
+  
+  nav a
+  {
+    border-left: 1px solid #efefef;
+    color: #999999;
+    display:inline-block;
+    line-height: 18px;
+    padding-left: 80px;
+    text-decoration: none;
   }
 }
