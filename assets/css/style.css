@@ -7,19 +7,26 @@ body
   background-image: url('../images/backgroundZebra.png');
   background-repeat: repeat-x repeat-y;
 }
-
+.containsAll
+{
+  margin: 0 auto;
+}
+/*------------HEADER-------------------------*/
 header
 {
-  overflow: auto;
   position: fixed;
+  margin: 0 auto;
   z-index: 99;
   width: 100%;
   margin-bottom: 30px;
-  overflow: auto;
   background: #fff;
   border-bottom: 2px solid #cccccc;
 }
-
+.navigator
+{
+  width: 960px;
+  margin: 0 auto;
+}
 .nameLogo
 {
   background: #4aaaa5;
@@ -33,64 +40,40 @@ header
   text-decoration: none;
   width: 250px;
 }
-
-.content
-{
-  margin: auto;
-  min-width: 960px;
-  min-height: 400px;
-  margin-bottom: 100px;
-  margin-left: 120px;
-  padding-top: 130px;
-}
-
-footer
-{
-  background-color: #666666;
-  width: 100%;
-  text-align: center;
-  line-height: 70px;
-  border-top: 10px solid #499995;
-}
-
-.navigator
-{
-  margin-left: 120px;
-  width: 960px;
-  /*clear: both; *//*removed this and no change happened*/
-}
-
 nav
 {
   float:right;
   margin-top : 30px;
 }
-
 nav a
 {
   border-left: 1px solid #efefef;
   color: #999999;
-  display:inline-block;
   line-height: 18px;
   margin-left: 15px;
   padding-left: 15px;
-  text-decoration: none;
 }
-
 nav a:first-child
 {
   border-left: 0 none;
 }
-
 li
 {
-  display: inline;
+  display: inline-block;
   float: right;
   font-size:18px;
   margin-left : 10px;
   padding: 0px 5px 10px 0px;
 }
 
+/*---------------BODY-----------------------------*/
+.content
+{
+  margin:0 auto;
+  max-width: 960px;
+  margin-bottom: 100px;
+  padding-top: 130px;
+}
 h1
 {
   background-color: #499995;
@@ -98,7 +81,6 @@ h1
   font-family: Georgia, Times, Times New Roman, Serif;
   font-size:40px;
 }
-
 h2
 {
   border-bottom: 3px solid #ddd;
@@ -107,7 +89,6 @@ h2
   line-height: 48px;
   margin: 20px 10px 0px 20px;
 }
-
 h3
 {
   border-bottom: 2px solid #ddd;
@@ -117,59 +98,49 @@ h3
   margin: 20px 20px 0px 20px;
   text-align:center;
 }
-
 .clearfix::after
 {
   clear: both;
   content: "";
   display: block;
 }
-
 .mainbar
 {
   background-color: #ffffff;
   border: 2px solid #dddddd;
   float: left;
-  margin-right: 45px;
-  padding-right: 5px;
   width: 650px;
 }
-
 .sidebar
 {
   background-color: #ffffff;
   border: 2px solid #dddddd; 
-  float: left;
-  width: 270px;
+  float: right;
+  min-width: 270px;
 }
-
 .mainSection
 {
   margin: 15px;
 }
-
 a 
 {
   text-decoration: none;
 }
-
 .project
 {
   float: left;
   margin: 20px 10px 25px;
   overflow: auto;
   position: relative;
-  width: 260px;
+  width: 270px;
 }
-
 .project img
 {
-  border-left: 20px;
-  border-right: 20px;
   opacity: 0.8;
   width: 100%;
+  
+  border: 0 none;
 }
-
 .project p
 {
   /*margin-bottom: 5px;*/
@@ -177,13 +148,12 @@ a
   border-bottom: 0;
   bottom: 20px;
   color: #ffffff;
-  padding: 15px;
+  padding: 15px 0px 15px 0px; /*this was causing the scrolling*/
   position: absolute;
   text-align: center;
   text-decoration: none;
   width: 100%;
 }
-
 .myImage
 {
   float: left;
@@ -191,20 +161,17 @@ a
   padding: 5px 10px 20px 10px;
   width: 200px;
 }
-
 .myLinks
 {
   border-bottom: 20px;
   margin: 20px 20px 20px 20px;
 }
-
 img.logo
 {
   height: 60px;
   margin: 0px 5px 20px 5px;
   width: 60px;
 }
-
 input[type=submit]
 {
   background-color:#499995;
@@ -212,19 +179,16 @@ input[type=submit]
   font-size:20px;
   padding: 10px 20px;
 }
-
 .passage
 {
   line-height: 25px;
   padding-left: 10px;
 }
-
 textarea
 {
   height: 200px;
   width: 100%;
 }
-
 input[type="text"],
 input[type="email"]
 {
@@ -232,6 +196,17 @@ input[type="email"]
   height: 30px;
   width: 100%;
 }
+
+/*---------------FOOTER--------------------------*/
+footer
+{
+  background-color: #666666;
+  width: 100%;
+  text-align: center;
+  line-height: 70px;
+  border-top: 10px solid #499995;
+}
+
 
 /*media queries for making the site responsive*/
 @media screen and (max-width: 980px)
@@ -243,10 +218,8 @@ input[type="email"]
   .content
   {
     margin: auto;
-    min-width: 750px;
-    min-height: 400px;
+    width: 700px;
     margin-bottom: 100px;
-    margin-left: 120px;
     padding-top: 130px;
   }
   
@@ -254,95 +227,89 @@ input[type="email"]
   {
     max-width: 400px;
   }
-
-  .mainSection .project
-  {
-    margin-left: 50px;
-  }
 }
 
 @media screen and (max-width: 768px)
 {
   .navigator
   {
-    width: 600px;
-    margin-left: 60px;
+    width: 630px;
   }
-  
   .content
   {
     margin: auto;
-    min-width: 600px;
-    min-height: 400px;
+    width: 630px;
     margin-bottom: 100px;
-    margin-left: 60px;
-    padding-top: 130px;
   }
-  
   .mainbar
   {
-    min-width: 500px;
+    min-width: 630px;
   }
   .sidebar
   {
-    width: 600px;
+    margin-top: 10px;
+    width: 630px;
+    float: left;
   }
   .project
   {
-    width: 450px;
+    width: 47%;
+  }
+  .project:nth-child(odd)
+  {
+    float:right;
   }
 }
 
 @media screen and (max-width: 640px)
 {
+  header
+  {
+    padding:0px;
+    width: 100%;
+  }
   .navigator
   {
-    width: 500px;
+    width: 100%;
+  }
+  nav
+  {
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
   }
   .content
   {
-    margin: auto;
-    width: 500px;
-    min-height: 400px;
-    margin-bottom: 100px;
-    margin-left: 60px;
-    margin-right: 60px;
-    padding-top: 180px;
+    margin:0 auto;
+    width: 100%;
   }
-  
   .mainbar
   {
-    max-width: 500px;
-    border-bottom: 20px;
+    width: 100%; 
+    margin: 5px 10px; 
   }
-  
   .sidebar
   {
-    width: 500px;
+    width: 100%;
+    margin: 5px 10px;
   }
-  
   .nameLogo
   {
-    width: 500px;
+    width: 100%;
     padding: 0px;
     border: 0px;
     margin: 0 auto;
   }
-  
   .nav
   {
+    display: inline-block;
     width: 100%;
     margin: auto;
-    float: left;
   }
-  
   nav a
   {
-    border-left: 1px solid #efefef;
-    color: #999999;
-    display:inline-block;
-    line-height: 18px;
-    padding-left: 80px;
-    text-decoration: none;
+    width: 30%;
+    text-align: center;
   }
 }
+
